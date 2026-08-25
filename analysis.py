@@ -22,3 +22,5 @@ print(data["Failure_Count"].sum())
 
 print("\nAverage Energy Consumption:")
 print(data["Energy_Consumption_kWh"].mean())
+print("\nAverage Downtime by Maintenance Type:")
+print(data.groupby("Maintenance_Type")["Downtime_Hours"].mean())
